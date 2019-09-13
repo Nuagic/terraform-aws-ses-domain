@@ -34,6 +34,11 @@ variable "receive_s3_prefix" {
   type        = string
 }
 
+variable "receive_sns_arn" {
+  description = "The arn of the SNS topic."
+  type        = string
+}
+
 variable "route53_zone_id" {
   description = "Route53 host zone ID to enable SES."
   type        = string

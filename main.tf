@@ -177,8 +177,8 @@ resource "aws_ses_receipt_rule" "main" {
   scan_enabled  = true
 
   s3_action {
-    position = 1
-
+    position          = 1
+    topic_arn         = var.receive_sns_arn
     bucket_name       = var.receive_s3_bucket
     object_key_prefix = var.receive_s3_prefix
   }
